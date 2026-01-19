@@ -56,12 +56,15 @@ html {
   align-items: center;
   background-color: var(--section-dark);
   padding: 24px 0;
+  border-bottom: 1px solid #412567;
 }
 .logo {
   width: 219px;
+  height: 34px;
 }
 .logo img {
   width: 100%;
+  height: 100%;
 }
 .nav-menu {
   list-style: none;
@@ -70,16 +73,25 @@ html {
 }
 .nav-link {
   text-decoration: none;
+  padding: 2.5px 6.5px;
   font-size: 1rem;
   font-weight: 500;
   line-height: 120%;
   color: var(--primary-white);
+  border-radius: 4px;
+}
+.nav-link:hover {
+  background: var(--gradient);
+}
+.hamburger {
+  width: 24px;
+  display: none;
 }
 .hero-container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 101px 0;
-  background-image: url("../hero-bg.png");
+  background: url("../hero-bg.png"), var(--section-dark);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -106,7 +118,70 @@ html {
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 100px;
+  box-shadow: 0px 0px 20px #00ff88b0;
 }
 .mic {
   width: 115px;
+  animation: zoomInOut 2s ease-in-out infinite;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hero-heading {
+  color: var(--primary-white);
+  font-size: 3.75rem;
+  font-weight: 800;
+  margin: 24px 0 8px;
+}
+.paragraph {
+  text-align: center;
+  color: var(--paragraph);
+  font-size: 1rem;
+}
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 576px) {
+  .nav-menu,
+  .nav-btn {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero-container {
+    padding: 40px 0;
+    background-size: 100% 60%;
+    background-position-y: 40px;
+  }
+  .menu-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+  }
+  .mic-container {
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+  }
+  .mic-container::before {
+    top: 3px;
+    right: 2px;
+  }
+  .mic {
+    width: 46px;
+  }
+  .hero-heading {
+    font-size: 2.5rem;
+  }
 }
