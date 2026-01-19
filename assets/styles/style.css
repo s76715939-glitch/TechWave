@@ -21,6 +21,7 @@ body {
   --section-light: #230e3d;
   --section-dark: #1a0b2e;
   --card-bg: rgba(53, 17, 101, 0.4);
+  --episode-card-bg: #250D44;
   --gradient: linear-gradient(30deg, #f7e93f 10%, #fb09b4 50%, #9100f8 90%);
 }
 
@@ -284,6 +285,7 @@ body {
 .grid-p {
   line-height: 24px;
   text-align: left;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .grid-card:nth-child(1) {
@@ -297,6 +299,108 @@ body {
 
 .grid-card:nth-child(4) {
   grid-column: span 2;
+}
+
+.episode-section {
+  margin-top: 120px;
+}
+
+.feature-card-section {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature-card {
+  max-width: 380px;
+  background-color: var(--episode-card-bg);
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.episode-video {
+  width: 100%;
+  height: 214px;
+}
+
+.episode-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.video-time {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--green);
+
+}
+
+.host-section {
+  margin: 120px 0;
+}
+
+.host-card {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--card-bg);
+  border-radius: 40px;
+}
+
+.host-image {
+  width: 200px;
+  height: 200px;
+}
+
+.host-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.host-name {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.host-name,
+.host-p {
+  text-align: left;
+}
+
+.host-p {
+  line-height: 24px;
+}
+
+.host-socials {
+  display: flex;
+  gap: 8px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #533C72;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  background-color: var(--section-dark);
 }
 
 @media screen and (max-width: 992px) {
@@ -384,5 +488,30 @@ body {
 
   .grid-card {
     padding: 20px;
+  }
+
+  .episode-heading {
+    font-size: 1.3rem;
+  }
+
+  .episode-details {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .host-card {
+    flex-direction: column;
+  }
+
+  .host-details {
+    align-items: center;
+  }
+
+  .host-card {
+    padding: 24px;
+  }
+
+  .host-p {
+    text-align: center;
   }
 }
