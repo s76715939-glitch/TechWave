@@ -46,6 +46,13 @@ html {
   color: var(--primary-white);
   background-color: var(--green);
 }
+.section-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-white);
+  text-align: center;
+  margin-bottom: 16px;
+}
 #header-section {
   max-width: 1600px;
   margin: 0 auto;
@@ -145,11 +152,101 @@ html {
   text-align: center;
   color: var(--paragraph);
   font-size: 1rem;
+  line-height: 40px;
 }
 .hero-buttons {
-  margin-top: 24px;
+  margin-top: 20px;
   display: flex;
   gap: 8px;
+}
+#main-container {
+  background-color: var(--section-dark);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.about-section {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0 80px;
+}
+.rank-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  gap: 40px;
+  border-top: 1px solid rgba(217, 217, 217, 0.1);
+}
+.rank-card {
+  padding: 5px 36px;
+  text-align: center;
+}
+.rank-number {
+  font-size: 2.8rem;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rank-number i {
+  font-size: 2rem;
+}
+.rank-p {
+  text-transform: uppercase;
+  line-height: 1;
+}
+.why-choose-section {
+  padding: 120px 0;
+  background-color: var(--section-light);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.grid-card {
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+}
+.card-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-white);
+}
+.grid-p {
+  line-height: 24px;
+  text-align: left;
+}
+.grid-card:nth-child(1) {
+  grid-row: span 2;
+}
+.grid-card:nth-child(2),
+.grid-card:nth-child(3) {
+  grid-column: span 2;
+}
+.grid-card:nth-child(4) {
+  grid-column: span 2;
 }
 @media screen and (max-width: 576px) {
   .nav-menu,
@@ -183,5 +280,28 @@ html {
   }
   .hero-heading {
     font-size: 2.5rem;
+  }
+  .section-heading {
+    font-size: 2rem;
+  }
+  .paragraph {
+    line-height: 20px;
+  }
+  .rank-number {
+    font-size: 2rem;
+  }
+  .rank-container {
+    margin-top: 40px;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .rank-card {
+    padding: 0;
+  }
+  .about-content {
+    padding: 25px 0 40px;
+  }
+  .paragraph {
+    font-size: 0.8rem;
   }
 }
