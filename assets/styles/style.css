@@ -1,15 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+html {
+  font-size: 16px;
+}
 :root {
-    --primary-white: #FFFFFF;
-    --paragraph: #D1CED5;
-    --section-light: #230E3D;
-    --section-dark: #1A0B2E;
-    --card-bg: rgba(53, 17, 101, 0.4);
+  --primary-white: #ffffff;
+  --paragraph: #d1ced5;
+  --green: #00ff88;
+  --section-light: #230e3d;
+  --section-dark: #1a0b2e;
+  --card-bg: rgba(53, 17, 101, 0.4);
+  --gradient: linear-gradient(30deg, #f7e93f 10%, #fb09b4 50%, #9100f8 90%);
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+}
+.btn {
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-white);
+  padding: 12.5px 16px;
+  border-radius: 100px;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.btn-gradient {
+  background: var(--gradient);
+  transition: all 1s ease-in;
+}
+.btn-green {
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 11.5px 15px;
+  transition: all 0.2s;
+}
+.btn-green:hover {
+  color: var(--primary-white);
+  background-color: var(--green);
+}
+#header-section {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--section-dark);
+  padding: 24px 0;
+}
+.logo {
+  width: 219px;
+}
+.logo img {
+  width: 100%;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--primary-white);
+}
+.hero-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 101px 0;
+  background-image: url("../hero-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mic-container {
+  width: 350px;
+  height: 350px;
+  background-image: url("../hero-circle.png");
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.mic-container::before {
+  content: "NEW";
+  position: absolute;
+  top: 15px;
+  right: 28px;
+  background-color: var(--green);
+  color: var(--section-dark);
+  padding: 8px 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 100px;
+}
+.mic {
+  width: 115px;
 }
