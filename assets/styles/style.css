@@ -542,6 +542,11 @@ body {
     grid-column: span 1;
     grid-row: span 1;
   }
+
+  .host-card {
+    flex-direction: column;
+    padding: 24px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 767px) {
@@ -648,16 +653,8 @@ body {
     gap: 8px;
   }
 
-  .host-card {
-    flex-direction: column;
-  }
-
   .host-details {
     align-items: center;
-  }
-
-  .host-card {
-    padding: 24px;
   }
 
   .host-p {
