@@ -31,7 +31,7 @@ body {
   --episode-card-bg: #250d44;
   --gradient: linear-gradient(30deg, #f7e93f 10%, #fb09b4 50%, #9100f8 90%);
 }
-
+/* Global Clases */
 .font-inter {
   font-family: "Inter", sans-serif;
   font-weight: normal;
@@ -51,7 +51,6 @@ body {
 
 .btn-gradient {
   background: var(--gradient);
-  transition: all 1s ease-in;
 }
 
 .btn-green {
@@ -63,7 +62,8 @@ body {
 
 .btn-green:hover {
   color: var(--primary-white);
-  background-color: var(--green);
+  background-color: var(--card-bg);
+  border-color: var(--section-light);
 }
 
 .section-heading {
@@ -74,11 +74,19 @@ body {
   margin-bottom: 16px;
 }
 
+.paragraph {
+  text-align: center;
+  color: var(--paragraph);
+  font-size: 1rem;
+  line-height: 40px;
+  font-weight: 400;
+}
+/* Header Section Start */
 #header-section {
   max-width: 1600px;
   margin: 0 auto;
 }
-
+/* NavBar Section */
 .menu-container {
   display: flex;
   justify-content: space-around;
@@ -122,7 +130,7 @@ body {
   width: 24px;
   display: none;
 }
-
+/* Hero Section */
 .hero-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -200,26 +208,20 @@ body {
   margin: 24px 0 8px;
 }
 
-.paragraph {
-  text-align: center;
-  color: var(--paragraph);
-  font-size: 1rem;
-  line-height: 40px;
-  font-weight: 400;
-}
-
 .hero-buttons {
   margin-top: 20px;
   display: flex;
   gap: 8px;
 }
+/* Header Section End */
 
+/* Main Section Start */
 #main-container {
   background-color: var(--section-dark);
   max-width: 1600px;
   margin: 0 auto;
 }
-
+/* About Section */
 .about-section {
   width: 85%;
   max-width: 1200px;
@@ -233,7 +235,7 @@ body {
   text-align: center;
   padding: 50px 0 80px;
 }
-
+/* About Section - Rank container */
 .rank-container {
   display: flex;
   justify-content: space-between;
@@ -266,7 +268,7 @@ body {
   text-transform: uppercase;
   line-height: 1;
 }
-
+/* Why Choose Section */
 .why-choose-section {
   padding: 120px 0;
   background-color: var(--section-light);
@@ -324,7 +326,7 @@ body {
 .grid-card:nth-child(4) {
   grid-column: span 2;
 }
-
+/* Feature Episode Section */
 .episode-section {
   margin-top: 120px;
 }
@@ -428,6 +430,9 @@ body {
 .social-link:hover {
   background-color: var(--section-dark);
 }
+/* Main Section End */
+
+/* Footer Section Start */
 #footer-section {
   max-width: 1600px;
   margin: 0 auto;
@@ -464,6 +469,12 @@ body {
 .footer-p {
   line-height: normal;
 }
+
+/* Footer Section End */
+
+/* Media Query Section for Responsive Design */
+
+/* Media Query for Big Screen (Laptop/Desktop) */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -477,6 +488,8 @@ body {
     grid-column: span 2;
   }
 }
+
+/* Media Query for Medium Screen (Tab/iPad) */
 @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -487,6 +500,8 @@ body {
     grid-row: span 1;
   }
 }
+
+/* Media Query for Small Screen (Mobile Device) */
 @media screen and (max-width: 576px) {
   .btn {
     font-size: 0.85rem;
