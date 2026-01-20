@@ -8,6 +8,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,12 +22,13 @@ body {
 
 :root {
   --primary-white: #ffffff;
-  --paragraph: #d1ced5;
+  --paragraph: rgba(255, 255, 255, 0.8);
+  --paragraph-light: rgba(255, 255, 255, 0.6);
   --green: #00ff88;
   --section-light: #230e3d;
   --section-dark: #1a0b2e;
   --card-bg: rgba(53, 17, 101, 0.4);
-  --episode-card-bg: #250D44;
+  --episode-card-bg: #250d44;
   --gradient: linear-gradient(30deg, #f7e93f 10%, #fb09b4 50%, #9100f8 90%);
 }
 
@@ -203,6 +205,7 @@ body {
   color: var(--paragraph);
   font-size: 1rem;
   line-height: 40px;
+  font-weight: 400;
 }
 
 .hero-buttons {
@@ -305,7 +308,8 @@ body {
 .grid-p {
   line-height: 24px;
   text-align: left;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--paragraph-light);
+  font-weight: 400;
 }
 
 .grid-card:nth-child(1) {
@@ -332,6 +336,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 40px;
 }
 
 .feature-card {
@@ -339,7 +344,6 @@ body {
   background-color: var(--episode-card-bg);
   border-radius: 30px;
   overflow: hidden;
-  margin-top: 40px;
 }
 
 .episode-video {
@@ -359,7 +363,6 @@ body {
   line-height: 24px;
   font-weight: 500;
   color: var(--green);
-
 }
 
 .host-section {
@@ -403,6 +406,8 @@ body {
 
 .host-p {
   line-height: 24px;
+  font-weight: 400;
+  color: var(--paragraph-light);
 }
 
 .host-socials {
@@ -413,7 +418,7 @@ body {
 .social-link {
   width: 40px;
   height: 40px;
-  border: 1px solid #533C72;
+  border: 1px solid #533c72;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -423,8 +428,56 @@ body {
 .social-link:hover {
   background-color: var(--section-dark);
 }
-
-@media screen and (max-width: 992px) {
+#footer-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 120px 0;
+  align-items: center;
+  background: url("../footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.footer-logo {
+  width: 410px;
+  height: 60px;
+}
+.footer-social-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.footer-social {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.footer-social-p {
+  font-size: 1rem;
+  color: var(--paragraph-light);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.footer-p {
+  line-height: normal;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .grid-card:nth-child(n) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .grid-card:nth-child(1) {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -434,9 +487,10 @@ body {
     grid-row: span 1;
   }
 }
-
 @media screen and (max-width: 576px) {
-
+  .btn {
+    font-size: 0.85rem;
+  }
   .nav-menu,
   .nav-btn {
     display: none;
@@ -445,11 +499,13 @@ body {
   .hamburger {
     display: flex;
   }
-
+  .logo {
+    width: 137px;
+    height: 20px;
+  }
   .hero-container {
+    background-image: url("../hero-bg-sm.png");
     padding: 40px 0;
-    background-size: 100% 60%;
-    background-position-y: 40px;
   }
 
   .menu-container {
@@ -465,8 +521,10 @@ body {
   }
 
   .mic-container::before {
-    top: 3px;
-    right: 2px;
+    font-size: 0.95rem;
+    top: 5px;
+    right: 3px;
+    padding: 8px 16px;
   }
 
   .mic {
@@ -509,6 +567,7 @@ body {
 
   .grid-card {
     padding: 20px;
+    gap: 10px;
   }
 
   .episode-heading {
@@ -534,5 +593,28 @@ body {
 
   .host-p {
     text-align: center;
+  }
+  .footer-logo {
+    width: 219px;
+    height: 32px;
+  }
+  .footer-social-container {
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 245px;
+    justify-content: center;
+  }
+  #footer-section {
+    gap: 24px;
+    padding: 40px 0;
+    background-image: url(../footer-bg-sm.png);
+  }
+}
+@media screen and (max-width: 415px) {
+  .footer-social-icon {
+    width: 15px;
+  }
+  .footer-social-p {
+    font-size: 0.8rem;
   }
 }
