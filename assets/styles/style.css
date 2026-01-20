@@ -248,16 +248,14 @@ body {
 
 /* About Section - Rank container */
 .rank-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
-  flex-wrap: wrap;
   padding-top: 80px;
-  gap: 40px;
   border-top: 1px solid rgba(217, 217, 217, 0.1);
 }
 
 .rank-card {
-  padding: 5px 36px;
   text-align: center;
 }
 
@@ -272,7 +270,7 @@ body {
 }
 
 .rank-number i {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .rank-p {
@@ -494,6 +492,12 @@ body {
 /* Media Query Section for Responsive Design */
 
 /* Media Query for Big Screen (Laptop/Desktop) */
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  #footer-section {
+    background-size: 140% 100%;
+  }
+}
+
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -510,11 +514,15 @@ body {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1400px) {
-  #footer-section {
-    background-size: 140% 100%;
+@media screen and (max-width: 922px) {
+  .rank-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .rank-card:nth-child(3),
+  .rank-card:nth-child(4) {
+    margin-top: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -618,16 +626,6 @@ body {
     font-size: 2rem;
   }
 
-  .rank-container {
-    margin-top: 40px;
-    justify-content: space-evenly;
-    gap: 20px;
-  }
-
-  .rank-card {
-    padding: 0;
-  }
-
   .about-content {
     padding: 25px 0 40px;
   }
@@ -692,5 +690,9 @@ body {
 
   .footer-social-p {
     font-size: 0.8rem;
+  }
+
+  .rank-p {
+    font-size: 0.7rem;
   }
 }
