@@ -31,6 +31,7 @@ body {
   --episode-card-bg: #250d44;
   --gradient: linear-gradient(30deg, #f7e93f 10%, #fb09b4 50%, #9100f8 90%);
 }
+
 /* Global Clases */
 .font-inter {
   font-family: "Inter", sans-serif;
@@ -81,11 +82,13 @@ body {
   line-height: 40px;
   font-weight: 400;
 }
+
 /* Header Section Start */
 #header-section {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 /* NavBar Section */
 .menu-container {
   display: flex;
@@ -130,12 +133,13 @@ body {
   width: 24px;
   display: none;
 }
+
 /* Hero Section */
 .hero-container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 101px 0;
-  background: url("../hero-bg.png"), var(--section-dark);
+  background: url("../images/hero-bg.png"), var(--section-dark);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -146,7 +150,7 @@ body {
 .mic-container {
   width: 350px;
   height: 350px;
-  background-image: url("../hero-circle.png");
+  background-image: url("../images/hero-circle.png");
   background-repeat: no-repeat;
   display: grid;
   place-items: center;
@@ -164,27 +168,31 @@ body {
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 100px;
-  box-shadow: 0px 0px 20px #00ff88b0;
-  animation: glowing 2s linear infinite;
+  animation: glowing 3s linear infinite;
 }
 
 @keyframes glowing {
   0% {
-    box-shadow: 0px 0px 20px #00ff88b0;
+    box-shadow: 0px 0px 3px #00ff88d6;
   }
 
+
   50% {
-    box-shadow: 0px 0px 5px #00ff88b0;
+    box-shadow: 0px 0px 20px #00ff88d6;
+  }
+
+  75% {
+    box-shadow: 0px 0px 10px #00ff88d6;
   }
 
   100% {
-    box-shadow: 0px 0px 20px #00ff88b0;
+    box-shadow: 0px 0px 3px #00ff88d6;
   }
 }
 
 .mic {
   width: 115px;
-  animation: zoomInOut 3s ease-in-out infinite;
+  animation: zoomInOut 5s ease-in-out infinite;
 }
 
 @keyframes zoomInOut {
@@ -193,7 +201,7 @@ body {
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
 
   100% {
@@ -213,6 +221,7 @@ body {
   display: flex;
   gap: 8px;
 }
+
 /* Header Section End */
 
 /* Main Section Start */
@@ -221,6 +230,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 /* About Section */
 .about-section {
   width: 85%;
@@ -235,6 +245,7 @@ body {
   text-align: center;
   padding: 50px 0 80px;
 }
+
 /* About Section - Rank container */
 .rank-container {
   display: flex;
@@ -268,6 +279,7 @@ body {
   text-transform: uppercase;
   line-height: 1;
 }
+
 /* Why Choose Section */
 .why-choose-section {
   padding: 120px 0;
@@ -326,6 +338,7 @@ body {
 .grid-card:nth-child(4) {
   grid-column: span 2;
 }
+
 /* Feature Episode Section */
 .episode-section {
   margin-top: 120px;
@@ -430,6 +443,7 @@ body {
 .social-link:hover {
   background-color: var(--section-dark);
 }
+
 /* Main Section End */
 
 /* Footer Section Start */
@@ -441,31 +455,36 @@ body {
   gap: 32px;
   padding: 120px 0;
   align-items: center;
-  background: url("../footer-bg.png");
+  background: url("../images/footer-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
 }
+
 .footer-logo {
-  width: 410px;
-  height: 60px;
+  width: 350px;
 }
+
 .footer-social-container {
   display: flex;
   gap: 40px;
   align-items: center;
 }
+
 .footer-social {
+  text-decoration: none;
   display: flex;
   gap: 8px;
   align-items: center;
 }
+
 .footer-social-p {
   font-size: 1rem;
   color: var(--paragraph-light);
   font-weight: 500;
   text-transform: capitalize;
 }
+
 .footer-p {
   line-height: normal;
 }
@@ -480,13 +499,29 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
+
   .grid-card:nth-child(n) {
     grid-column: span 1;
     grid-row: span 1;
   }
+
   .grid-card:nth-child(1) {
     grid-column: span 2;
   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  #footer-section {
+    background-size: 140% 100%;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #footer-section {
+    background-size: 180% 100%;
+  }
+
 }
 
 /* Media Query for Medium Screen (Tab/iPad) */
@@ -501,11 +536,30 @@ body {
   }
 }
 
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  #footer-section {
+    background-size: 120% 100%;
+    padding: 40px;
+  }
+
+  .footer-social-container {
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 245px;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 250px;
+  }
+}
+
 /* Media Query for Small Screen (Mobile Device) */
 @media screen and (max-width: 576px) {
   .btn {
     font-size: 0.85rem;
   }
+
   .nav-menu,
   .nav-btn {
     display: none;
@@ -514,12 +568,14 @@ body {
   .hamburger {
     display: flex;
   }
+
   .logo {
     width: 137px;
     height: 20px;
   }
+
   .hero-container {
-    background-image: url("../hero-bg-sm.png");
+    background-image: url("../images/hero-bg-sm.png");
     padding: 40px 0;
   }
 
@@ -609,26 +665,31 @@ body {
   .host-p {
     text-align: center;
   }
+
   .footer-logo {
     width: 219px;
     height: 32px;
   }
+
   .footer-social-container {
     gap: 16px;
     flex-wrap: wrap;
     width: 245px;
     justify-content: center;
   }
+
   #footer-section {
     gap: 24px;
     padding: 40px 0;
-    background-image: url(../footer-bg-sm.png);
+    background-image: url('../images/footer-bg-sm.png');
   }
 }
+
 @media screen and (max-width: 415px) {
   .footer-social-icon {
     width: 15px;
   }
+
   .footer-social-p {
     font-size: 0.8rem;
   }
