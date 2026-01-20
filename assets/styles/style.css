@@ -547,6 +547,10 @@ body {
     flex-direction: column;
     padding: 24px;
   }
+
+  .host-details {
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 767px) {
@@ -651,10 +655,6 @@ body {
   .episode-details {
     padding: 16px;
     gap: 8px;
-  }
-
-  .host-details {
-    align-items: center;
   }
 
   .host-p {
